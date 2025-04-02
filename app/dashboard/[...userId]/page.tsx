@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import Navbar from '../../components/navbar'
 import { addWebsite } from '../../actions/dashboardActions';
+import Monitor from '@/app/components/monitor';
 
 const page = () => {
   const [url, seturl] = useState("");
@@ -21,6 +22,7 @@ const page = () => {
     <div className='flex items-center justify-center p-6'>
       Welcome to dashboard
     </div>
+    <Monitor/>
     <form onSubmit={handleSubmit} className="flex flex-col items-center space-y-2">
       <input 
         type="text"
