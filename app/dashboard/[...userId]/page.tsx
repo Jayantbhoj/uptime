@@ -1,12 +1,19 @@
 "use client"
 import React, { useState } from 'react'
-import Navbar from '../components/navbar'
-import { addWebsite } from '../actions/dashboardActions';
+import Navbar from '../../components/navbar'
+import { addWebsite } from '../../actions/dashboardActions';
 
 const page = () => {
   const [url, seturl] = useState("");
   function handleSubmit(){
-    addWebsite(url);
+    
+    try{
+      addWebsite(url);
+      alert("website added")
+    }catch(error){
+      alert("failed to add website")
+    }
+
   }
   return (
     <>
