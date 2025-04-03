@@ -18,7 +18,6 @@ const page = () => {
   }
   return (
     <>
-    <Navbar/>
     <div className='flex items-center justify-center p-6'>
       Welcome to dashboard
     </div>
